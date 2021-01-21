@@ -263,14 +263,14 @@ var myState = {
             zoom: 1
         }
       
-        pdfjsLib.getDocument('./my_document.pdf').then((pdf) => {
+        pdfjsLib.getDocument('assets/my_document.pdf').then((pdf) => {
       
             myState.pdf = pdf;
             render();
  
         });
  
-        function render() {
+    function render() {
             myState.pdf.getPage(myState.currentPage).then((page) => {
           
                 var canvas = document.getElementById("pdf_renderer");
