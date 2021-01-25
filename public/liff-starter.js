@@ -145,7 +145,7 @@ function registerButtonHandlers() {
 
             liff.sendMessages([{
                 'type': 'text',
-                'text': document.getElementById("commentText")
+                'text': document.getElementById("commentText").value
             }]).then(function() {
                 window.alert('Message sent');
             }).catch(function(error) {
