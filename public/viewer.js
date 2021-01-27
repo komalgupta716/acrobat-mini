@@ -119,11 +119,10 @@ function processUser()
     {
         var temp = parameters[0].split("=");
         l = unescape(temp[1]);
-        document.getElementById("embedView").src = l;
+        document.getElementById("embedView").src = toString(l);
         document.getElementById("objectView").data = l;
         document.getElementById("fileLink").href = l;
         // const myLink = liff.permanentLink.createUrl()
-        // document.getElementById("text").innerHTML = toString(myLink);
+        document.getElementById("text").innerHTML = l;
     }
-    // document.getElementById("embedView").src = l;
   }
