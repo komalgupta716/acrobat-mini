@@ -119,7 +119,7 @@ function processUser()
     {
         var temp = parameters[0].split("=");
         l = unescape(temp[1]);
-        document.getElementById("embedView").src = l
+        document.getElementById("embedView").data = l
         document.getElementById("objectView").data = l;
         document.getElementById("fileLink").href = l
     }
