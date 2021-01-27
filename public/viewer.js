@@ -119,7 +119,8 @@ function processUser()
     {
         var temp = parameters[0].split("=");
         l = unescape(temp[1]);
-        document.getElementById("embedView").src = toString(l);
+        document.getElementById("embedView").setAttribute("src", l);
+        document.getElementById("embedView").setAttribute("src", toString(l));
         document.getElementById("objectView").data = l;
         document.getElementById("fileLink").href = l;
         // const myLink = liff.permanentLink.createUrl()
