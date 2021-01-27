@@ -8,24 +8,17 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div id="log"></div>
-        <object data="https://drive.google.com/file/d/1ZKgZhUuBr_-nLnbpExhQmqKCx_1QqxT2/preview"  width="400" height="500">
-        <embed src="https://drive.google.com/file/d/1ZKgZhUuBr_-nLnbpExhQmqKCx_1QqxT2/preview" width="400px" height="500px" />
-            <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://drive.google.com/file/d/1ZKgZhUuBr_-nLnbpExhQmqKCx_1QqxT2/preview">View the PDF</a>.</p>
+        <div id="viewerContent">
+        <object id="objectView" width="400" height="500">
+        <embed id ="embedView" width="400px" height="500px" />
+            <p>This browser does not support PDFs. Please download the PDF to view it: <a id="fileLink">View the PDF</a>.</p>
         </embed></object>
         <div>
                 <input type="text" id="commentText"><br><br>
                 <button id="addCommentsButton">Add Comments</button>
         </div>
-
-        <object data="https://drive.google.com/file/d/0B61QNFCgSgUtMXRpQmlvRVF2aWc/preview"  width="400" height="500">
-            <embed src="https://drive.google.com/file/d/0B61QNFCgSgUtMXRpQmlvRVF2aWc/preview" width="400px" height="500px" />
-                <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://drive.google.com/file/d/1ZKgZhUuBr_-nLnbpExhQmqKCx_1QqxT2/preview">View the PDF</a>.</p>
-            </embed></object>
-            <div>
-                    <input type="text" id="commentText"><br><br>
-                    <button id="addCommentsButton">Add Comments</button>
-            </div>
+        <div id="text"></div>
+        </div>
 
         <!-- LIFF ID ERROR -->
         <div id="liffIdErrorMessage" class="hidden">
@@ -53,7 +46,7 @@
             <p>Unable to receive the LIFF ID as an environment variable.</p>
         </div>
         <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-        <script src="liff-starter.js"></script>
+        <script src="viewer.js"></script>
         <script
                 src="http://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js">
         </script>
