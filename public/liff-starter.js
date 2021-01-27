@@ -112,6 +112,19 @@ function registerButtonHandlers() {
         });
     });
 
+    document.getElementById('shareFile').addEventListener('click', function() {
+        if (liff.isApiAvailable('shareTargetPicker')) {
+            liff.shareTargetPicker([{
+                'type': 'text',
+                'text': 'Hello, World!' + this.value
+            }]).then(
+                document.getElementById('shareTargetPickerMessage').textContent = "Share target picker was launched."
+            ).catch(function (res) {
+                document.getElementById('shareTargetPickerMessage').textContent = "Failed to launch share target picker.";
+            });
+        }
+    })
+
     // closeWindow call
     document.getElementById('closeWindowButton').addEventListener('click', function() {
         if (!liff.isInClient()) {
@@ -138,21 +151,21 @@ function registerButtonHandlers() {
     });
 
     // add comment
-    document.getElementById('addCommentsButton').addEventListener('click', function() {
-        if (!liff.isInClient()) {
-            sendAlertIfNotInClient();
-        } else {
+    // document.getElementById('addCommentsButton').addEventListener('click', function() {
+    //     if (!liff.isInClient()) {
+    //         sendAlertIfNotInClient();
+    //     } else {
 
-            liff.sendMessages([{
-                'type': 'text',
-                'text': document.getElementById("commentText").value
-            }]).then(function() {
-                window.alert('Message sent');
-            }).catch(function(error) {
-                window.alert('Error sending message: ' + error);
-            });
-        }
-    });
+    //         liff.sendMessages([{
+    //             'type': 'text',
+    //             'text': document.getElementById("commentText").value
+    //         }]).then(function() {
+    //             window.alert('Message sent');
+    //         }).catch(function(error) {
+    //             window.alert('Error sending message: ' + error);
+    //         });
+    //     }
+    // });
 
     // scanCode call
     document.getElementById('scanQrCodeButton').addEventListener('click', function() {
