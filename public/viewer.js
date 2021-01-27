@@ -119,9 +119,10 @@ function processUser()
     {
         var temp = parameters[0].split("=");
         l = unescape(temp[1]);
-        document.getElementById("embedView").data = l
+        document.getElementById("embedView").data = l;
         document.getElementById("objectView").data = l;
-        document.getElementById("fileLink").href = l
+        document.getElementById("fileLink").href = l;
+        document.getElementById("text").innerHTML = l;
     }
     // document.getElementById("embedView").src = l;
   }
