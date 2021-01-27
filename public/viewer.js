@@ -119,7 +119,10 @@ function processUser()
     {
         var temp = parameters[0].split("=");
         l = unescape(temp[1]);
-        document.getElementById("embedView").setAttribute("src", l);
+        var fileViewer = document.getElementById("embedView");
+        var clone = fileViewer.cloneNode(true);
+        clone.setAttribute('src',l);
+        fileViewer.parentNode.replaceChild(clone,fileViewer)
         document.getElementById("embedView").setAttribute("src", toString(l));
         document.getElementById("objectView").data = l;
         document.getElementById("fileLink").href = l;
