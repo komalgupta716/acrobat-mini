@@ -63,7 +63,7 @@ function initializeLiff(myLiffId) {
  */
 function initializeApp() {
     registerButtonHandlers();
-    processUser()
+    processFile()
     // check if the user is logged in/out, and disable inappropriate button
 }
 
@@ -77,10 +77,19 @@ function registerButtonHandlers() {
         if (!liff.isInClient()) {
             sendAlertIfNotInClient();
         } else {
-
+            var messageText="";
+            if(liff.isLoggedIn())
+            {
+                liff.getProfile().then(function(profile) {
+                    messageText = profile.displayName + "commented: ";
+                }).catch(function(error) {
+                    window.alert('Error getting profile: ' + error);
+                });
+            }
+            messageText+= document.getElementById("commentText").value;
             liff.sendMessages([{
                 'type': 'text',
-                'text': document.getElementById("commentText").value
+                'text': messageText
             }]).then(function() {
                 window.alert('Message sent');
             }).catch(function(error) {
@@ -88,31 +97,9 @@ function registerButtonHandlers() {
             });
         }
     });
-
-    // // get profile call
-    // document.getElementById('getProfileButton').addEventListener('click', function() {
-    //     liff.getProfile().then(function(profile) {
-    //         document.getElementById('userIdProfileField').textContent = profile.userId;
-    //         document.getElementById('displayNameField').textContent = profile.displayName;
-
-    //         const profilePictureDiv = document.getElementById('profilePictureDiv');
-    //         if (profilePictureDiv.firstElementChild) {
-    //             profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
-    //         }
-    //         const img = document.createElement('img');
-    //         img.src = profile.pictureUrl;
-    //         img.alt = 'Profile Picture';
-    //         profilePictureDiv.appendChild(img);
-
-    //         document.getElementById('statusMessageField').textContent = profile.statusMessage;
-    //         toggleProfileData();
-    //     }).catch(function(error) {
-    //         window.alert('Error getting profile: ' + error);
-    //     });
-    // });
 }
 
-function processUser()
+function processFile()
   {
     var parameters = location.search.substring(1).split("&");
     if(parameters.length!=0)
