@@ -82,7 +82,7 @@ function registerButtonHandlers() {
                 'text': 'Comment added : ' + document.getElementById("commentText").value
             }]).then(function() {
                 window.alert('Message sent');
-                document.getElementById('commentText').innerHTML = "";
+                document.getElementById('commentText').value = "";
             }).catch(function(error) {
                 window.alert('Error sending message: ' + error);
             });
