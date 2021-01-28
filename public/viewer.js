@@ -73,22 +73,23 @@ function initializeApp() {
 function registerButtonHandlers() {
 
     // add comment
-    document.getElementById('addCommentsButton').addEventListener('click', function() {
-        if (!liff.isInClient()) {
-            sendAlertIfNotInClient();
-        } else {
-            liff.sendMessages([{
-                'type': 'text',
-                'text': 'Comment added : ' + document.getElementById("commentText").value
-            }]).then(function() {
-                window.alert('Message sent');
-                document.getElementById('commentText').value = "";
-            }).catch(function(error) {
-                window.alert('Error sending message: ' + error);
-            });
-        }
-    });
+    // document.getElementById('addCommentsButton').addEventListener('click', function() {
+    //     if (!liff.isInClient()) {
+    //         sendAlertIfNotInClient();
+    //     } else {
+    //         liff.sendMessages([{
+    //             'type': 'text',
+    //             'text': 'Comment added : ' + document.getElementById("commentText").value
+    //         }]).then(function() {
+    //             window.alert('Message sent');
+    //             document.getElementById('commentText').value = "";
+    //         }).catch(function(error) {
+    //             window.alert('Error sending message: ' + error);
+    //         });
+    //     }
+    // });
 
+    // closeWindow call
     document.getElementById('closeWindowButton').addEventListener('click', function() {
         if (!liff.isInClient()) {
             sendAlertIfNotInClient();
@@ -98,6 +99,7 @@ function registerButtonHandlers() {
     });
 }
 
+// Identifies the file to be opened from url parameter
 function processFile()
   {
     var parameters = location.search.substring(1).split("&");
@@ -118,6 +120,7 @@ function processFile()
     }
   }
 
+// Maps file names to file links
   var hashMap = new Map([
     ["cryptography", "https://drive.google.com/file/d/0B61QNFCgSgUtMXRpQmlvRVF2aWc/preview"],
     ["spectrometry", "https://drive.google.com/file/d/14JDA5g73CEHSi1UeTpNdrQu8kLnGAVar/preview"],
