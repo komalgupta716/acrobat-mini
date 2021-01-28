@@ -118,15 +118,21 @@ function processUser()
     if(parameters.length!=0)
     {
         var temp = parameters[0].split("=");
-        l = unescape(temp[1]);
-        var fileViewer = document.getElementById("embedView");
-        var clone = fileViewer.cloneNode(true);
-        clone.setAttribute('src',l);
-        fileViewer.parentNode.replaceChild(clone,fileViewer)
-        document.getElementById("embedView").setAttribute("src", toString(l));
-        document.getElementById("objectView").data = l;
-        document.getElementById("fileLink").href = l;
-        // const myLink = liff.permanentLink.createUrl()
-        document.getElementById("text").innerHTML = l;
+        val = unescape(temp[1]);
+        if(hashMap.has(val))
+        {
+            l = hashMap.get(val);
+            var fileViewer = document.getElementById("embedView");
+            var clone = fileViewer.cloneNode(true);
+            clone.setAttribute('src',l);
+            fileViewer.parentNode.replaceChild(clone,fileViewer)
+            document.getElementById("objectView").data = l;
+            document.getElementById("fileLink").href = l;
+        }
     }
   }
+
+  var hashMap = new Map([
+    ["file1", "https://drive.google.com/file/d/0B61QNFCgSgUtMXRpQmlvRVF2aWc/preview"],
+    ["file2", "https://drive.google.com/file/d/14JDA5g73CEHSi1UeTpNdrQu8kLnGAVar/preview"]
+]);

@@ -113,10 +113,11 @@ function registerButtonHandlers() {
     });
 
     document.getElementById('shareFile').addEventListener('click', function() {
+        liffUrl = "https://liff.line.me/1655586786-1zonZ5y5/"
         if (liff.isApiAvailable('shareTargetPicker')) {
             liff.shareTargetPicker([{
                 'type': 'text',
-                'text': 'Hello, World!' + this.value
+                'text': 'Hello! Check out this file and share your comments \n' + liffUrl + this.value
             }]).then(
                 document.getElementById('shareTargetPickerMessage').textContent = "Share target picker was launched."
             ).catch(function (res) {
@@ -149,23 +150,6 @@ function registerButtonHandlers() {
             });
         }
     });
-
-    // add comment
-    // document.getElementById('addCommentsButton').addEventListener('click', function() {
-    //     if (!liff.isInClient()) {
-    //         sendAlertIfNotInClient();
-    //     } else {
-
-    //         liff.sendMessages([{
-    //             'type': 'text',
-    //             'text': document.getElementById("commentText").value
-    //         }]).then(function() {
-    //             window.alert('Message sent');
-    //         }).catch(function(error) {
-    //             window.alert('Error sending message: ' + error);
-    //         });
-    //     }
-    // });
 
     // scanCode call
     document.getElementById('scanQrCodeButton').addEventListener('click', function() {
@@ -233,7 +217,6 @@ function registerButtonHandlers() {
     document.getElementById('liffLoginButton').addEventListener('click', function() {
         if (!liff.isLoggedIn()) {
             // set `redirectUri` to redirect the user to a URL other than the front page of your LIFF app.
-            liff.login({redirectUri : "https://demo-komal.herokuapp.com/viewer.html?key=abc"});
         }
     });
 
