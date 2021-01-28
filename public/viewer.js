@@ -77,19 +77,9 @@ function registerButtonHandlers() {
         if (!liff.isInClient()) {
             sendAlertIfNotInClient();
         } else {
-            userName="default";
-            if(liff.isLoggedIn())
-            {
-                liff.getProfile().then(function(profile) {
-                    displayName = profile.displayName + "commented: ";
-                }).catch(function(error) {
-                    window.alert('Error getting profile: ' + error);
-                });
-            }
-            messageText = userName + " " + displayUserName + document.getElementById("commentText").value;
             liff.sendMessages([{
                 'type': 'text',
-                'text': messageText
+                'text': 'Comment added : ' + document.getElementById("commentText").value
             }]).then(function() {
                 window.alert('Message sent');
                 document.getElementById('commentText').innerHTML = "";
