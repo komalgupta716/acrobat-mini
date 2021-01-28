@@ -105,9 +105,9 @@ function registerButtonHandlers() {
                 'type': 'text',
                 'text': 'Hello! Check out this file and share your comments \n' + liffUrl + this.value
             }]).then(
-                document.getElementById('shareTargetPickerMessage').textContent = "Share target picker was launched."
+                document.getElementById('shareTargetPickerMessage').innerHTML = "Share target picker was launched."
             ).catch(function (res) {
-                document.getElementById('shareTargetPickerMessage').textContent = "Failed to launch share target picker.";
+                document.getElementById('shareTargetPickerMessage').innerHTML = "Failed to launch share target picker.";
             });
         }
     })
