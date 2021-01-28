@@ -30,6 +30,10 @@ button {
     margin: 4px;
 }
 
+input {
+    margin: 4px
+}
+
 #code-block {
     background-color: #eee;
     border: 1px solid #999;
@@ -42,30 +46,13 @@ button {
     white-space: nowrap;
 }
 
-#profilePictureDiv {
-    text-align: center;
-}
-
-#profileImageDiv {
-    height: 100px;
-    width: 100px;
-}
-
 #statusMessage {
     position: relative;
     top: 40px;
 }
 
-#canvas_container {
-        width: 800px;
-        height: 450px;
-        overflow: auto;
-}
- 
-#canvas_container {
-    background: #333;
-    text-align: center;
-    border: solid 3px;
+#bottom_bar {
+    padding-top: 20px;
 }
 
 .textLeft {
@@ -74,6 +61,10 @@ button {
 
 .buttonGroup {
     padding-top: 20px;
+    position:absolute;
+    top:100vh;
+    transform:translateY(-100%);
+    width:100%;
 }
 
 .hidden {

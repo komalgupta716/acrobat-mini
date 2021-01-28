@@ -9,19 +9,18 @@
     </head>
     <body>
         <div id="viewerContent">
-            <object id="objectView" width="400" height="700">
+            <object id="objectView" width="800" height="800">
                 <!-- <p>This browser does not support PDFs. Please download the PDF to view it: <a id="fileLink">View the PDF</a>.</p> -->
-            <embed id ="embedView" width="400px" height="700px" />
+            <embed id ="embedView" width=100% height=100% />
             </embed></object>
-            <div>
-                <input type="text" id="commentText">
-                <button id="addCommentsButton">Add Comment</button>
-            </div>
-            <!-- EXIT BUTTON -->
-            <div class="buttonGroup">
-                    <div class="buttonRow">
-                        <button id="closeWindowButton">Exit</button>
-                    </div>
+            <div id="bottom_bar">
+                <div>
+                    <input type="text" id="commentText">
+                    <button id="addCommentsButton">Add Comment</button>
+                </div>
+                <div class="buttonRow">
+                    <button id="closeWindowButton">Exit</button>
+                </div>
             </div>
         </div>
 

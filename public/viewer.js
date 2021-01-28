@@ -119,6 +119,7 @@ function processFile()
   }
 
   var hashMap = new Map([
-    ["file1", "https://drive.google.com/file/d/0B61QNFCgSgUtMXRpQmlvRVF2aWc/preview"],
-    ["file2", "https://drive.google.com/file/d/14JDA5g73CEHSi1UeTpNdrQu8kLnGAVar/preview"]
+    ["cryptography", "https://drive.google.com/file/d/0B61QNFCgSgUtMXRpQmlvRVF2aWc/preview"],
+    ["spectrometry", "https://drive.google.com/file/d/14JDA5g73CEHSi1UeTpNdrQu8kLnGAVar/preview"],
+    ["python", "https://drive.google.com/file/d/1y5paUXFSaex7yUNdVne3ggV6Kw8tjZUl/preview"]
 ]);
