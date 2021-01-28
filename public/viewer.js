@@ -114,7 +114,7 @@ function processFile()
             clone.setAttribute('src',l);
             fileViewer.parentNode.replaceChild(clone,fileViewer)
             document.getElementById("objectView").data = l;
-            document.getElementById("fileLink").href = l;
+            // document.getElementById("fileLink").href = l;
         }
     }
   }

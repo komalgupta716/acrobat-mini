@@ -89,7 +89,7 @@ function displayUserName(){
         userName = profile.displayName;
         document.getElementById("fileListHeader").innerHTML = "Welcome, " + userName;
     }).catch(function(error) {
-        window.alert('Error getting profile: ' + error);
+        // window.alert('Error getting profile: ' + error);
     });
 }
 
