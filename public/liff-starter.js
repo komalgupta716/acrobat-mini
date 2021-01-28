@@ -100,21 +100,23 @@ function registerButtonHandlers() {
 
     var shareButtons = document.getElementsByClassName('shareFile');
 
-    Array.from(shareButtons).forEach(function(element) {
-        element.addEventListener('click', function() {
-            liffUrl = "https://liff.line.me/1655586786-1zonZ5y5/viewer.html?fileName="
-            if (liff.isApiAvailable('shareTargetPicker')) {
-                liff.shareTargetPicker([{
-                    'type': 'text',
-                    'text': 'Hello! Check out this file and share your comments \n' + liffUrl + this.value
-                }]).then(
-                    document.getElementById('shareTargetPickerMessage').innerHTML = ""
-                ).catch(function (res) {
-                    document.getElementById('shareTargetPickerMessage').innerHTML = "Failed to launch share target picker.";
-                });
-            }
-        });
-      });
+    //Step 1(b) : Uncomment to enable file sharing
+
+    // Array.from(shareButtons).forEach(function(element) {
+    //     element.addEventListener('click', function() {
+    //         liffUrl = "https://liff.line.me/{liffId}/viewer.html?fileName="
+    //         if (liff.isApiAvailable('shareTargetPicker')) {
+    //             liff.shareTargetPicker([{
+    //                 'type': 'text',
+    //                 'text': 'Hello! Check out this file and share your comments \n' + liffUrl + this.value
+    //             }]).then(
+    //                 document.getElementById('shareTargetPickerMessage').innerHTML = ""
+    //             ).catch(function (res) {
+    //                 document.getElementById('shareTargetPickerMessage').innerHTML = "Failed to launch share target picker.";
+    //             });
+    //         }
+    //     });
+    //   });
 
     // closeWindow call
     document.getElementById('closeWindowButton').addEventListener('click', function() {
