@@ -63,6 +63,7 @@ function initializeLiff(myLiffId) {
  */
 function initializeApp() {
     registerButtonHandlers();
+    displayIsInClientInfo();
 
     // check if the user is logged in/out, and disable inappropriate button
     if (liff.isLoggedIn()) {
@@ -73,12 +74,24 @@ function initializeApp() {
     }
 }
 
+/**
+* Toggle the login/logout buttons based on the isInClient status, and display a message accordingly
+*/
+function displayIsInClientInfo() {
+    if (liff.isInClient()) {
+        document.getElementById('liffLoginButton').classList.toggle('hidden');
+        document.getElementById('liffLogoutButton').classList.toggle('hidden');
+    } else {
+        document.getElementById('shareTargetPicker').classList.toggle('hidden');
+    }
+}
+
 function displayUserName(){
     liff.getProfile().then(function(profile) {
         userName = profile.displayName;
         document.getElementById("fileListHeader").innerHTML = "Welcome, " + userName;
     }).catch(function(error) {
-        window.alert('Error getting profile: ' + error);
+        // window.alert('Error getting profile: ' + error);
     });
 }
 
@@ -132,4 +145,17 @@ function registerButtonHandlers() {
 */
 function sendAlertIfNotInClient() {
     alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+}
+
+/**
+* Toggle specified element
+* @param {string} elementId The ID of the selected element
+*/
+function toggleElement(elementId) {
+    const elem = document.getElementById(elementId);
+    if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
+        elem.style.display = 'none';
+    } else {
+        elem.style.display = 'block';
+    }
 }
