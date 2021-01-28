@@ -77,16 +77,16 @@ function registerButtonHandlers() {
         if (!liff.isInClient()) {
             sendAlertIfNotInClient();
         } else {
-            var messageText="";
+            var userName="default";
             if(liff.isLoggedIn())
             {
                 liff.getProfile().then(function(profile) {
-                    messageText = profile.displayName + "commented: ";
+                    userName = profile.displayName + "commented: ";
                 }).catch(function(error) {
                     window.alert('Error getting profile: ' + error);
                 });
             }
-            messageText+= document.getElementById("commentText").value;
+            messageText = userName + document.getElementById("commentText").value;
             liff.sendMessages([{
                 'type': 'text',
                 'text': messageText
@@ -95,6 +95,14 @@ function registerButtonHandlers() {
             }).catch(function(error) {
                 window.alert('Error sending message: ' + error);
             });
+        }
+    });
+
+    document.getElementById('closeWindowButton').addEventListener('click', function() {
+        if (!liff.isInClient()) {
+            sendAlertIfNotInClient();
+        } else {
+            liff.closeWindow();
         }
     });
 }
