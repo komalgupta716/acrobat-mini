@@ -63,12 +63,12 @@ function initializeLiff(myLiffId) {
  */
 function initializeApp() {
     registerButtonHandlers();
-    displayIsInClientInfo();
+    // displayIsInClientInfo();
 
     // check if the user is logged in/out, and disable inappropriate button
     if (liff.isLoggedIn()) {
         document.getElementById('liffLoginButton').disabled = true;
-        displayUserName();
+        // displayUserName();
     } else {
         document.getElementById('liffLogoutButton').disabled = true;
     }
@@ -81,8 +81,6 @@ function displayIsInClientInfo() {
     if (liff.isInClient()) {
         document.getElementById('liffLoginButton').classList.toggle('hidden');
         document.getElementById('liffLogoutButton').classList.toggle('hidden');
-    } else {
-        document.getElementById('shareTargetPicker').classList.toggle('hidden');
     }
 }
 
@@ -91,7 +89,7 @@ function displayUserName(){
         userName = profile.displayName;
         document.getElementById("fileListHeader").innerHTML = "Welcome, " + userName;
     }).catch(function(error) {
-        // window.alert('Error getting profile: ' + error);
+        window.alert('Error getting profile: ' + error);
     });
 }
 
