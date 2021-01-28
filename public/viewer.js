@@ -77,21 +77,22 @@ function registerButtonHandlers() {
         if (!liff.isInClient()) {
             sendAlertIfNotInClient();
         } else {
-            var userName="default";
+            userName="default";
             if(liff.isLoggedIn())
             {
                 liff.getProfile().then(function(profile) {
-                    userName = profile.displayName + "commented: ";
+                    displayName = profile.displayName + "commented: ";
                 }).catch(function(error) {
                     window.alert('Error getting profile: ' + error);
                 });
             }
-            messageText = userName + document.getElementById("commentText").value;
+            messageText = userName + " " + displayUserName + document.getElementById("commentText").value;
             liff.sendMessages([{
                 'type': 'text',
                 'text': messageText
             }]).then(function() {
                 window.alert('Message sent');
+                document.getElementById('commentText').innerHTML = "";
             }).catch(function(error) {
                 window.alert('Error sending message: ' + error);
             });
