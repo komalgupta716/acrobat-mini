@@ -94,10 +94,10 @@ Follow the below instructions to deploy your customized app using Heroku and Nod
     - [Node.js](https://nodejs.org/en/)
     - Items listed [here](#what-youll-need)
 
-2. Clone the [line-liff-starter](https://github.com/line/line-liff-v2-starter) GitHub repository.
+2. Clone the [line-liff-starter](https://github.com/komalgupta716/acrobat-mini.git) GitHub repository.
 
     ```shell
-    git clone https://github.com/line/line-liff-v2-starter
+    git clone https://github.com/komalgupta716/acrobat-mini.git
     ```
 3. `cd` into `line-liff-v2-starter` directory.
 
