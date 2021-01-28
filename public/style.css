@@ -53,6 +53,7 @@ input {
 
 #bottom_bar {
     padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 .textLeft {
@@ -61,10 +62,6 @@ input {
 
 .buttonGroup {
     padding-top: 20px;
-    position:absolute;
-    top:100vh;
-    transform:translateY(-100%);
-    width:100%;
 }
 
 .hidden {
