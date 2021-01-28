@@ -121,5 +121,8 @@ function processFile()
   var hashMap = new Map([
     ["cryptography", "https://drive.google.com/file/d/0B61QNFCgSgUtMXRpQmlvRVF2aWc/preview"],
     ["spectrometry", "https://drive.google.com/file/d/14JDA5g73CEHSi1UeTpNdrQu8kLnGAVar/preview"],
-    ["python", "https://drive.google.com/file/d/1y5paUXFSaex7yUNdVne3ggV6Kw8tjZUl/preview"]
+    ["python", "https://drive.google.com/file/d/1y5paUXFSaex7yUNdVne3ggV6Kw8tjZUl/preview"],
+    ["developer_guide", "https://drive.google.com/file/d/1WejH9ga1DVw1Vg88Zg7wKtmdNHYlJ9oM/preview"],
+    ["polymer", "https://drive.google.com/file/d/1X1PujdXBLXpTBhCnCsCAFYmAhbAl1dke/preview"],
+    ["stephen_covey", "https://drive.google.com/file/d/1WsXtPFH7lAcxHJBAvE6IJW3bPNJoMeUT/preview"]
 ]);
