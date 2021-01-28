@@ -113,7 +113,7 @@ function registerButtonHandlers() {
     });
 
     document.getElementById('shareFile').addEventListener('click', function() {
-        liffUrl = "https://liff.line.me/1655586786-1zonZ5y5/"
+        liffUrl = "https://liff.line.me/1655586786-1zonZ5y5/viewer.html?fileName="
         if (liff.isApiAvailable('shareTargetPicker')) {
             liff.shareTargetPicker([{
                 'type': 'text',
