@@ -20,8 +20,8 @@ Follow the below instructions to deploy your customized app using Heroku and Nod
 
 1. Make sure you have the following installed.
 
-    - [Git](https://git-scm.com/)
-    - [Node.js](https://nodejs.org/en/)
+    - [Git](https://git-scm.com/) (Check with git --version)
+    - [Node.js](https://nodejs.org/en/) (Check with node -v)
     - Items listed [here](#what-youll-need)
 
 2. Clone the [line-liff-starter](https://github.com/komalgupta716/acrobat-mini.git) GitHub repository.
@@ -110,6 +110,6 @@ To open your LIFF app in your browser, enter the app's Heroku URL: `https://{Her
 
 
 ## Add Share and Commenting 
-1. Uncomment code in liff-starter.js given under Step 1 to enable Share buttons. 
+1. Uncomment code in liff-starter.js given under Step 1 to enable Share buttons. Add your liff Id.
 2. Uncomment code in viewer.html given under Step 2(a) to display Add Comment option.
 3. Uncomment code in Step 2(b) to enable sending comments to chats.
