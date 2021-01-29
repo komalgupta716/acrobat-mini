@@ -100,7 +100,7 @@ function registerButtonHandlers() {
 
     var shareButtons = document.getElementsByClassName('shareFile');
 
-    //Step 1(b) : Uncomment to enable file sharing
+    //Step 1 : Uncomment to enable file sharing
 
     // Array.from(shareButtons).forEach(function(element) {
     //     element.addEventListener('click', function() {

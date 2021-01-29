@@ -72,7 +72,7 @@ function initializeApp() {
 */
 function registerButtonHandlers() {
 
-    //Step 1b : Uncomment to enable sending comments to chats
+    //Step 2 (b) : Uncomment to enable sending comments to chats
 
     // add comment
     // document.getElementById('addCommentsButton').addEventListener('click', function() {
