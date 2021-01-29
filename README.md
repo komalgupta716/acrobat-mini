@@ -110,6 +110,6 @@ To open your LIFF app in your browser, enter the app's Heroku URL: `https://{Her
 
 
 ## Add Share and Commenting 
-1. Uncomment code in liff-starter.js given under Step 1 to enable Share buttons. 
+1. Uncomment code in liff-starter.js given under Step 1 to enable Share buttons. Add your liff Id.
 2. Uncomment code in viewer.html given under Step 2(a) to display Add Comment option.
 3. Uncomment code in Step 2(b) to enable sending comments to chats.
