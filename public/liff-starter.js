@@ -104,7 +104,7 @@ function registerButtonHandlers() {
 
     Array.from(shareButtons).forEach(function(element) {
         element.addEventListener('click', function() {
-            liffUrl = "https://liff.line.me/{liffId}/viewer.html?fileName="
+            liffUrl = "https://liff.line.me/1655586786-1zonZ5y5/viewer.html?fileName="
             if (liff.isApiAvailable('shareTargetPicker')) {
                 liff.shareTargetPicker([{
                     'type': 'text',
