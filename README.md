@@ -20,8 +20,8 @@ Follow the below instructions to deploy your customized app using Heroku and Nod
 
 1. Make sure you have the following installed.
 
-    - [Git](https://git-scm.com/)
-    - [Node.js](https://nodejs.org/en/)
+    - [Git](https://git-scm.com/) (Check with git --version)
+    - [Node.js](https://nodejs.org/en/) (Check with node -v)
     - Items listed [here](#what-youll-need)
 
 2. Clone the [line-liff-starter](https://github.com/komalgupta716/acrobat-mini.git) GitHub repository.
