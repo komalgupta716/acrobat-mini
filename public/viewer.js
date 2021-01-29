@@ -75,21 +75,21 @@ function registerButtonHandlers() {
     //Step 2 (b) : Uncomment to enable sending comments to chats
 
     // add comment
-    // document.getElementById('addCommentsButton').addEventListener('click', function() {
-    //     if (!liff.isInClient()) {
-    //         sendAlertIfNotInClient();
-    //     } else {
-    //         liff.sendMessages([{
-    //             'type': 'text',
-    //             'text': 'Comment added : ' + document.getElementById("commentText").value
-    //         }]).then(function() {
-    //             window.alert('Message sent');
-    //             document.getElementById('commentText').value = "";
-    //         }).catch(function(error) {
-    //             window.alert('Error sending message: ' + error);
-    //         });
-    //     }
-    // });
+    document.getElementById('addCommentsButton').addEventListener('click', function() {
+        if (!liff.isInClient()) {
+            sendAlertIfNotInClient();
+        } else {
+            liff.sendMessages([{
+                'type': 'text',
+                'text': 'Comment added : ' + document.getElementById("commentText").value
+            }]).then(function() {
+                window.alert('Message sent');
+                document.getElementById('commentText').value = "";
+            }).catch(function(error) {
+                window.alert('Error sending message: ' + error);
+            });
+        }
+    });
 
     // closeWindow call
     document.getElementById('closeWindowButton').addEventListener('click', function() {
